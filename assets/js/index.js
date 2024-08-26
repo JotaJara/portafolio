@@ -1,7 +1,7 @@
 $(document).ready(function () {
     // Inicialización de Typed.js
     var typed = new Typed('#typed', {
-        strings: ["Jota", "un Desarrollador", "un Apasionado por la Tecnología"],
+        strings: ["Jota", "Desarrollador", "Apasionado de la Tecnología"],
         typeSpeed: 50,
         backSpeed: 25,
         loop: true
@@ -12,7 +12,7 @@ $(document).ready(function () {
     $('.tilt').tilt({
         scale: 1.1,
         glare: true,
-        maxGlare: 0.5
+        maxGlare: 0.8
     });
 
     // Inicialización de AOS (Animate On Scroll)
@@ -81,4 +81,4 @@ $(document).ready(function () {
     //         alert('An error occurred! Please try again later.')
     //     });
     // });
-});
+})
