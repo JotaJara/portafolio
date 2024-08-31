@@ -1,32 +1,38 @@
+const myModal = document.getElementById('Modal')
+const myInput = document.getElementById('project-card-1')
+
+myModal.addEventListener('shown.bs.modal', () => {
+    myInput.focus()
+})
+
+const myModal2 = document.getElementById('Modal2')
+const myInput2 = document.getElementById('project-card-2')
+
+myModal2.addEventListener('shown.bs.modal', () => {
+    myInput2.focus()
+})
+
 $(document).ready(function () {
-    // Inicialización de Typed.js
+
     var typed = new Typed('#typed', {
-        strings: ["Jota", "Desarrollador", "Apasionado de la Tecnología"],
+        strings: ["Juan Jara", "Desarrollador", "Apasionado de la Tecnología"],
         typeSpeed: 50,
         backSpeed: 25,
         loop: true
     });
 
-
-    // Inicialización de Tilt.js para el efecto de parallax
     $('.tilt').tilt({
         scale: 1.1,
         glare: true,
         maxGlare: 0.8
     });
 
-    // Inicialización de AOS (Animate On Scroll)
-    AOS.init({
-        duration: 1000,
-        once: true
-    });
 
-    // Manejo del formulario de contacto con Getform y Bootstrap Alerts
     $('#contact-form').on('submit', function (e) {
         e.preventDefault();
         var action = $(this).attr("action");
         $.ajax({
-            url: action, // Reemplaza con tu endpoint de Getform
+            url: action,
             method: 'POST',
             crossDomain: true,
             data: new FormData(this),
@@ -43,42 +49,7 @@ $(document).ready(function () {
             error: function () {
                 $('#error-message').fadeIn().delay(3000).fadeOut();
             }
-            // success: function () {
-            //     $('#form-alert')
-            //         .removeClass('alert-danger')
-            //         .addClass('alert-success')
-            //         .text('¡Mensaje enviado con éxito!')
-            //         .fadeIn();
-            //     $('#contact-form')[0].reset();
-            // },
-            // error: function () {
-            //     $('#form-alert')
-            //         .removeClass('alert-success')
-            //         .addClass('alert-danger')
-            //         .text('Ocurrió un error, por favor intenta nuevamente.')
-            //         .fadeIn();
-            // }
         });
     });
 
-    // $("#ajaxForm").submit(function (e) {
-    //     e.preventDefault();
-    //     var action = $(this).attr("action");
-    //     $.ajax({
-    //         type: "POST",
-    //         url: action,
-    //         crossDomain: true,
-    //         data: new FormData(this),
-    //         dataType: "json",
-    //         processData: false,
-    //         contentType: false,
-    //         headers: {
-    //             "Accept": "application/json"
-    //         }
-    //     }).done(function () {
-    //         alert('The form was submitted successfully.')
-    //     }).fail(function () {
-    //         alert('An error occurred! Please try again later.')
-    //     });
-    // });
 })

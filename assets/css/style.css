@@ -1,21 +1,27 @@
+html,
 body {
-    --sb-track-color: #232E33;
-    --sb-thumb-color: #6baf8d;
-    --sb-size: 11px;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
 }
 
+
+/*
+--sb-track-color: #232E33;
+--sb-thumb-color: #6baf8d;
+--sb-size: 11px;
 body::-webkit-scrollbar {
     width: var(--sb-size)
 }
 
 body::-webkit-scrollbar-track {
     background: var(--sb-track-color);
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 body::-webkit-scrollbar-thumb {
     background: var(--sb-thumb-color);
-    border-radius: 4px;
+    border-radius: 5px;
 
 }
 
@@ -23,15 +29,7 @@ body::-webkit-scrollbar-thumb {
     body {
         scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
     }
-}
-
-body,
-html {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    scroll-behavior: smooth;
-}
+} */
 
 .scroll-container {
     height: 100vh;
@@ -55,13 +53,42 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+
+
+.contactContainer {
+    width: 500px;
+    font-size: 1.5rem;
+}
+
+.aboutContainer {
+    width: 70%;
+}
+
+.tecnologias {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .header,
 .portfolio {
     height: 100vh;
     background: url('https://www.transparenttextures.com/patterns/dark-matter.png') center/cover no-repeat;
+}
+
+img.tech {
+    width: auto;
+    height: 80px;
+    filter: drop-shadow(0 0 8px rgba(0, 0, 0, .8))
 }
 
 .avatar {
@@ -73,26 +100,49 @@ html {
 
 .title {
     font-size: 4rem;
+    font-family: 'Courier New', monospace;
+    color: #000000;
+}
+
+/* #typed {
+    font-family: 'Annie Use Your Telescope', sans-serif;
+} */
+
+.about {
+    padding: 0 4em;
+    text-align: justify;
+}
+
+.about p {
+    font-size: 1.5rem;
     font-family: 'Press Start 2P', cursive;
     color: #000000;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    font-family: 'Orbitron', sans-serif;
-    color: #000000;
+.about h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 32px;
+
 }
 
+.portfolio {
+    font-family: 'Courier New', monospace;
+}
 
 .project-card {
     background-color: #282c34;
     color: #fff;
     padding: 20px;
+    width: 500px;
     margin-bottom: 20px;
     margin-top: 20px;
     border-radius: 10px;
     text-align: center;
     transition: all 0.3s ease;
+}
+
+.project-card p {
+    font-size: 22px;
 }
 
 .project-card:hover {
@@ -101,4 +151,23 @@ html {
 
 .alert {
     display: none;
+    font-size: 18px;
+}
+
+.fmsol2 {
+    display: none;
+}
+
+@media (max-width:750px) {
+    .modal {
+        width: auto;
+    }
+
+    .fmsol2 {
+        display: flex;
+    }
+
+    .fmsol {
+        display: none;
+    }
 }
